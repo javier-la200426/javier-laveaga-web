@@ -1,5 +1,5 @@
-import './App.css'
-import Courtois from './sections/Courtois/Courtois'
+import './App.css';
+import Courtois from './sections/Courtois/Courtois';
 
 //jsx file is a combination of html and javascript
 //this function defines a component
@@ -10,7 +10,7 @@ function App() {
       <Courtois />
     </>
 
-  )
+  );
 }
 
 export default App
