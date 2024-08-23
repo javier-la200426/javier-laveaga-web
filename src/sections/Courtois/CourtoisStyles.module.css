@@ -1,0 +1,81 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    height: 100dvh; /*100 percent of device (so that Courtois=profile takes up 
+    wholle screen*/
+    min-height: 500px; /*ensures element does not shrink below a certain height*/
+    /*if you go on phone and shift to the side*/
+
+    .Courtois_pic {
+        max-width: 200px;
+    }
+    span {
+        display: flex;
+        gap: 25px;
+        justify-content: center;
+        a {
+            margin: 0;
+            img {
+                width: 30px;
+            }
+        }
+    }
+    a {
+        width: fit-content;
+        align-self: center;
+    }
+    button {
+        background-color: var(--btn-color);
+        color: var(--btn-text-color); /*Depends if it is black or white*/
+        border: none;
+        border-radius: 20px;
+        width: 126px;
+        height: 50px;
+        font-size: 20px;
+        font-weight: bold;
+        box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+        transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
+    
+    }
+    button:hover {
+        cursor: pointer;
+         transform: scale(1.05);
+    }
+    /*When pressing the buttom*/
+    button:active {
+        transform: translateY(2px);
+        box-shadow: 0 2px 2px rgba(0,0,0,0.25);
+    }
+}
+
+/*Connects in some way the color icon to the profile pic*/
+.colorModeContainer {
+    position: relative;
+}
+
+.colorMode {
+    position: absolute;
+    right: 0;
+    width: 25px;
+}
+
+.colorMode:hover {
+    cursor:pointer;
+}
+
+/*Fix description*/
+.description{
+    max-width: 24ch;
+    align-self: center;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+
+

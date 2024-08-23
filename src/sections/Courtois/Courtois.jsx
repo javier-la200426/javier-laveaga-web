@@ -21,11 +21,11 @@ function Courtois() {
 
   const LinkedinIcon = theme === 'light' ? LinkedInLight: LinkedInDark;
   const GithubIcon = theme === 'light' ? githubLight: githubDark;
-
+  //styles.Courtois
   return (
     <section id='Courtois' className = {styles.container}>
       <div className = {styles.colorModeContainer}>
-        <img className = {styles.Courtois} 
+        <img className = {styles.Courtois_pic} 
         src={CourtoisImg} 
         alt = "Profile Pic"
         />
@@ -51,11 +51,11 @@ function Courtois() {
               <img src = {GithubIcon} alt = "Github icon" />  
             </a>
           </span>
-          <p> 
+          <p className={styles.description}> 
             Put some paragraph text here. Put some paragraph text here.
           </p>
           <a href = {Resume} download> 
-            <button className="hover_btn" >My Resume</button>
+            <button className="hover_btn" >Resume</button>
           </a>
       </div>
     
