@@ -28,7 +28,7 @@ body {
 #root {
     display: flex;
     flex-direction: column;
-    gap: 60xp;
+    gap: 60px; /*Very important for spacing between sections*/
 }
 
 /*This automatically changes the text color when shifting scenes*/
@@ -65,10 +65,15 @@ p {
 }
 
 .sectionTitle {
-    margin-top: 50px;
     margin-bottom: 30px;
 }
 
 .hover {
     cursor: pointer;
+}
+
+@media (width >= 800px) {
+    #root {
+        gap: 100px;
+    }
 }

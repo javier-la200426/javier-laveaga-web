@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './CourtoisStyles.module.css';
-import CourtoisImg from '../../assets/hero-img.png';
+import CourtoisImg from '../../assets/Final-3.png';
 //import backgroundIcon from '../../assets/sun.svg'
 import sun from '../../assets/sun.svg'
 import moon from '../../assets/moon.svg'

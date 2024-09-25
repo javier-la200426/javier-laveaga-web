@@ -3,6 +3,7 @@ import Courtois from './sections/Courtois/Courtois';
 import Projects from './sections/Projects/Projects';
 import Skills from './sections/Skills/skills';
 import Contact from './sections/Contact-info/Contact';
+import Footer from './sections/Footer/Footer'
 
 //jsx file is a combination of html and javascript
 //this function defines a component
@@ -14,6 +15,7 @@ function App() {
       <Projects />
       <Skills />
       <Contact/>
+      <Footer/>
 
     </>
 
