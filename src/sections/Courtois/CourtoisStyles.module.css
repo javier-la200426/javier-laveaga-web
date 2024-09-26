@@ -4,9 +4,10 @@
     justify-content: center;
     gap: 20px;
     text-align: center;
-    height: 100dvh; /*100 percent of device (so that Courtois=profile takes up 
+    min-height: 100dvh; /*100 percent of device (so that Courtois=profile takes up 
     wholle screen*/
-    min-height: 500px; /*ensures element does not shrink below a certain height*/
+    padding: 20px; /* Add some padding to prevent content from touching the edges */
+
     /*if you go on phone and shift to the side*/
 
     .Courtois_pic {
@@ -57,9 +58,7 @@
 }
 
 .colorMode {
-    position: absolute;
-    right: 0;
-    width: 25px;
+  position: absolute;
 }
 
 .colorMode:hover {
@@ -77,6 +76,32 @@
     flex-direction: column;
     gap: 20px;
 }
+
+
+@media (width >= 800px) {
+    .container {
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .Courtois_pic {
+            max-width: 350px;
+            width: 350px;
+        }
+    }
+}
+
+
+@media (width >= 1400px) {
+    .container {
+        .Courtois_pic {
+            max-width: 400px;
+            width: 400px;
+        }
+    }
+}
+    
+
 
 
 

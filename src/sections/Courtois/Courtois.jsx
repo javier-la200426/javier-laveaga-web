@@ -42,7 +42,7 @@ function Courtois() {
             <br />
             Laveaga
           </h1>
-          <h2>Backend and Frontend Developer</h2>
+          <h2>Backend Developer</h2>
           <span>
             <a href = "https://www.linkedin.com/in/javier-laveaga-4220aa268/" target = "_blank" >
               <img src = {LinkedinIcon} alt = "LinkedIn icon" />  
