@@ -52,7 +52,8 @@ function Courtois() {
             </a>
           </span>
           <p className={styles.description}> 
-            Put some paragraph text here. Put some paragraph text here.
+            I am a Computer Science student at Tufts University with experience in 
+            both front-end and back-end development
           </p>
           <a href = {Resume} download> 
             <button className="hover_btn" >Resume</button>
