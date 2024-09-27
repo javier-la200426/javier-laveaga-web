@@ -1,7 +1,7 @@
 import './App.css';
 import Courtois from './sections/Courtois/Courtois';
 import Projects from './sections/Projects/Projects';
-import Skills from './sections/Skills/skills';
+import Skills from './sections/Skills/Skills';
 import Contact from './sections/Contact-info/Contact';
 import Footer from './sections/Footer/Footer'
 
