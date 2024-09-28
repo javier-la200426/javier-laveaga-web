@@ -4,11 +4,15 @@ import CourtoisImg from '../../assets/Final-3.png';
 //import backgroundIcon from '../../assets/sun.svg'
 import sun from '../../assets/sun.svg'
 import moon from '../../assets/moon.svg'
+import light_mode from '../../assets/switch-light.svg'
+import dark_mode from '../../assets/switch-dark.svg'
 import LinkedInLight from '../../assets/linkedin-light.svg'
 import LinkedInDark from '../../assets/linkedin-dark.svg'
 import githubLight from '../../assets/github-light.svg'
 import githubDark from '../../assets/github-dark.svg'
 import Resume from '../../assets/cv.pdf'
+import MailInLight from '../../assets/mail-light.svg'
+import MailInDark from '../../assets/mail-dark.svg'
 import { useTheme } from '../../common/Theme';
 //In react we use classname instead of class
 //target is to open in a new window
@@ -17,10 +21,11 @@ function Courtois() {
   const {theme, toggleTheme} = useTheme();
 
   //set background icon based on whether theme is light or dark
-  const backgroundIcon = theme === 'light' ? sun : moon; //*reverse this
+  const backgroundIcon = theme === 'light' ? light_mode : dark_mode; //*reverse this
 
   const LinkedinIcon = theme === 'light' ? LinkedInLight: LinkedInDark;
   const GithubIcon = theme === 'light' ? githubLight: githubDark;
+  const MailIcon = theme === 'light' ? MailInLight: MailInDark;
   //styles.Courtois
   return (
     <section id='Courtois' className = {styles.container}>
@@ -49,6 +54,9 @@ function Courtois() {
             </a>
             <a href = "https://github.com/javier-la200426" target = "_blank" >
               <img src = {GithubIcon} alt = "Github icon" />  
+            </a>
+            <a href = "mailto:javier.la200426@gmail.com" target = "_blank" >
+              <img src = {MailIcon} alt = "Mail icon" />  
             </a>
           </span>
           <p className={styles.description}> 

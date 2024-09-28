@@ -20,7 +20,7 @@
         a {
             margin: 0;
             img {
-                width: 30px;
+                width: 50px;
             }
         }
     }
@@ -43,7 +43,7 @@
     }
     button:hover {
         cursor: pointer;
-         transform: scale(1.05);
+        transform: scale(1.05);
     }
     /*When pressing the buttom*/
     button:active {
