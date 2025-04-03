@@ -5,6 +5,7 @@ import Proj3 from '../../assets/CPU.png';
 import Proj4 from '../../assets/CLI.png';
 import ProjectCard from '../../common/ProjectCard';
 import Hopimg from '../../assets/HopImage.png';
+import Bloomberg from '../../assets/Bloomberg.png';
 
 function Projects() {
   return (
@@ -22,6 +23,13 @@ function Projects() {
           link={'https://github.com/javier-la200426/AI-Website'}
           h3={"AI Puppy Website"}
           p={"Developed an Integrated Development Environment (IDE) for LEGO SPIKE™ Prime "}
+        />
+
+        <ProjectCard
+          src={Bloomberg}
+          link={'https://github.com/javier-la200426/newsfeed-app-bloomberg/tree/main?tab=readme-ov-file'}
+          h3={"Bloomberg Newsfeed app"}
+          p={"Developed a FullStack Web Application using React, Flask, Redis, and Docker"}
         />
         <ProjectCard
           src={Proj2}
