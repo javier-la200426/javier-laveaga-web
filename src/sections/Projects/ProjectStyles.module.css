@@ -2,9 +2,14 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    padding: 0 15px;           /* adds left and right padding */
+
+    
+
     img {
         max-width: 500px;
         height: 300px; /* or any height you want */
+        width: 100%;
 
         object-fit: cover; /* fills box, cropping if needed */
 
