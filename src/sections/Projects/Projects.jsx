@@ -23,7 +23,7 @@ function Projects() {
           src={EnglishAtLargImg}
           link={'https://github.com/JumboCode/english-at-large'}
           h3={"Library system"}
-          p={"Built a library management system for English At Large - a nonprofit helps adult immigrants learn English"}
+          p={"Built a library management system for English At Large - a nonprofit that helps adult immigrants learn English"}
         />
         <ProjectCard
           src={Proj1}
