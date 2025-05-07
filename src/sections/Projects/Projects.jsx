@@ -6,6 +6,7 @@ import Proj4 from '../../assets/CLI.png';
 import ProjectCard from '../../common/ProjectCard';
 import Hopimg from '../../assets/HopImage.png';
 import Bloomberg from '../../assets/Bloomberg.png';
+import EnglishAtLargImg from '../../assets/EnglishAtLargImg.png'
 
 function Projects() {
   return (
@@ -17,6 +18,12 @@ function Projects() {
           link={'https://devpost.com/software/hopoffer?ref_content=my-projects-tab&ref_feature=my_projects'}
           h3={"HopOffer"}
           p={"Swipe. Match. Get Hired. The ultimate job discovery mobile app built for students"}
+        />
+        <ProjectCard
+          src={EnglishAtLargImg}
+          link={'https://github.com/JumboCode/english-at-large'}
+          h3={"Library system"}
+          p={"Built a library management system for English At Large - a nonprofit helps adult immigrants learn English"}
         />
         <ProjectCard
           src={Proj1}
