@@ -49,7 +49,7 @@ function Courtois() {
           </h1>
           <h2>Full Stack Developer</h2>
           <span>
-            <a href = "https://www.linkedin.com/in/javier-laveaga-4220aa268/" target = "_blank" >
+            <a href = "https://www.linkedin.com/in/javier-laveaga/" target = "_blank" >
               <img src = {LinkedinIcon} alt = "LinkedIn icon" />  
             </a>
             <a href = "https://github.com/javier-la200426" target = "_blank" >

@@ -7,12 +7,19 @@ import ProjectCard from '../../common/ProjectCard';
 import Hopimg from '../../assets/HopImage.png';
 import Bloomberg from '../../assets/Bloomberg.png';
 import EnglishAtLargImg from '../../assets/EnglishAtLargImg.png'
+import IconStart from '../../assets/IconStart.png'
 
 function Projects() {
   return (
     <section id="projects" className={styles.container}>
       <h1 className="sectionTitle">Projects </h1>
       <div className={styles.projectsContainer}>
+        <ProjectCard
+          src={IconStart}
+          link={'https://surveyaidapp.com/'}
+          h3={"SurveyAid"}
+          p={"Create AI-powered assessments in seconds."}
+        />
         <ProjectCard
           src={Hopimg}
           link={'https://devpost.com/software/hopoffer?ref_content=my-projects-tab&ref_feature=my_projects'}
