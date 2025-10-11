@@ -3,10 +3,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 60px;
+    gap: 40px;
     text-align: center;
     min-height: 100vh;
-    padding: 80px 40px;
+    padding: 80px 20px 60px 20px;
     position: relative;
 }
 
@@ -16,12 +16,12 @@
 }
 
 .Courtois_pic {
-    max-width: 280px;
-    width: 280px;
-    height: 280px;
+    max-width: 240px;
+    width: 240px;
+    height: 240px;
     object-fit: cover;
     border-radius: 50%;
-    border: 5px solid var(--accent-color);
+    border: 4px solid var(--accent-color);
     box-shadow: var(--card-shadow);
     position: relative;
     z-index: 2;
@@ -63,6 +63,12 @@
     flex-direction: column;
     gap: 30px;
     max-width: 600px;
+    align-items: center;
+    width: 100%;
+}
+
+.info a {
+    text-decoration: none;
 }
 
 .name {
@@ -130,16 +136,21 @@
     color: var(--btn-text-color);
     border: none;
     border-radius: 50px;
-    padding: 16px 40px;
-    font-size: 18px;
+    padding: 14px 35px;
+    font-size: 16px;
     font-weight: 600;
     box-shadow: var(--card-shadow);
     transition: all 0.3s ease;
     cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     font-family: 'Roboto Mono', monospace;
+    text-decoration: none;
+}
+
+.resumeBtn:focus {
+    outline: none;
 }
 
 .resumeBtn:hover {
@@ -166,7 +177,7 @@
 
 .scrollIndicator {
     position: absolute;
-    bottom: 40px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -195,18 +206,20 @@
         align-items: center;
         justify-content: center;
         gap: 100px;
-        padding: 120px 60px;
+        padding: 0 60px;
     }
 
     .Courtois_pic {
         max-width: 380px;
         width: 380px;
         height: 380px;
+        border: 5px solid var(--accent-color);
     }
 
     .info {
         text-align: left;
         align-items: flex-start;
+        max-width: 600px;
     }
 
     .socialLinks {
@@ -219,6 +232,16 @@
 
     .description {
         font-size: 20px;
+    }
+
+    .resumeBtn {
+        padding: 16px 40px;
+        font-size: 18px;
+        gap: 10px;
+    }
+
+    .scrollIndicator {
+        bottom: 40px;
     }
 }
 

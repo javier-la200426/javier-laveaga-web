@@ -75,27 +75,54 @@
 }
 
 .themeToggle {
-  width: 28px;
-  height: 28px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 .themeToggle:hover {
-  transform: rotate(20deg) scale(1.1);
+    transform: rotate(20deg) scale(1.1);
+}
+
+/* Make sun icon white/bright */
+[data-theme='light'] .themeToggle {
+    filter: brightness(0) invert(1);
+}
+
+/* Make moon icon dark */
+[data-theme='dark'] .themeToggle {
+    filter: brightness(0) invert(0);
 }
 
 @media (max-width: 768px) {
+  .navbar {
+    padding: 12px 0;
+  }
+
+  .navbar.scrolled {
+    padding: 10px 0;
+  }
+
+  .navContent {
+    padding: 0 15px;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
   .navLinks {
-    gap: 20px;
+    gap: 15px;
   }
   
   .navLinks li {
-    font-size: 14px;
+    font-size: 13px;
   }
-  
-  .navContent {
-    padding: 0 20px;
+
+  .themeToggle {
+    width: 24px;
+    height: 24px;
   }
 }
 
