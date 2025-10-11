@@ -2,46 +2,35 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 0 15px;           /* adds left and right padding */
-
-    
-
-    img {
-        max-width: 500px;
-        height: 300px; /* or any height you want */
-        width: 100%;
-
-        object-fit: cover; /* fills box, cropping if needed */
-
-        align-self: center;
-        background-color: var(--project-card-bg);
-        border-radius: 20px;
-    }
-    a {
-        width: fit-content;
-        text-decoration: none;
-        color: #222;
-        transition: transform 200ms ease-in-out;
-    }
-    a:hover {
-        transform: scale(1.05);
-    }
+    padding: 40px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .projectsContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 0 20px;
 }
 
-@media (width >= 800px) {
-    .projectsContainer{
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-        padding: 0 30px;
+@media (width >= 768px) {
+    .projectsContainer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        padding: 0 40px;
+    }
+}
+
+@media (width >= 1200px) {
+    .container {
+        padding: 60px 40px;
+    }
+
+    .projectsContainer {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
     }
 }
 

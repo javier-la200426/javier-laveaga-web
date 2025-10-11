@@ -1,11 +1,7 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import styles from './CourtoisStyles.module.css';
 import CourtoisImg from '../../assets/Final-3.png';
-//import backgroundIcon from '../../assets/sun.svg'
-import sun from '../../assets/sun.svg'
-import moon from '../../assets/moon.svg'
-import light_mode from '../../assets/switch-light.svg'
-import dark_mode from '../../assets/switch-dark.svg'
 import LinkedInLight from '../../assets/linkedin-light.svg'
 import LinkedInDark from '../../assets/linkedin-dark.svg'
 import githubLight from '../../assets/github-light.svg'
@@ -14,62 +10,122 @@ import Resume from '../../assets/cv.pdf'
 import MailInLight from '../../assets/mail-light.svg'
 import MailInDark from '../../assets/mail-dark.svg'
 import { useTheme } from '../../common/Theme';
-//In react we use classname instead of class
-//target is to open in a new window
-function Courtois() {
-  //setting the toggling for themes 
-  const {theme, toggleTheme} = useTheme();
 
-  //set background icon based on whether theme is light or dark
-  const backgroundIcon = theme === 'light' ? light_mode : dark_mode; //*reverse this
+function Courtois() {
+  const {theme} = useTheme();
 
   const LinkedinIcon = theme === 'light' ? LinkedInLight: LinkedInDark;
   const GithubIcon = theme === 'light' ? githubLight: githubDark;
   const MailIcon = theme === 'light' ? MailInLight: MailInDark;
-  //styles.Courtois
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const imageVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
     <section id='Courtois' className = {styles.container}>
-      <div className = {styles.colorModeContainer}>
-        <img className = {styles.Courtois_pic} 
-        src={CourtoisImg} 
-        alt = "Profile Pic"
-        />
-        <img 
-          className = {styles.colorMode}
-          src={backgroundIcon} 
-          alt = "Color Mode icon"
-          onClick = {toggleTheme}
-        />
-      </div>
-      <div className = {styles.info} > 
-          <h1> 
-            Javier 
-            <br />
-            Laveaga
-          </h1>
-          <h2>Full Stack Developer</h2>
-          <span>
-            <a href = "https://www.linkedin.com/in/javier-laveaga/" target = "_blank" >
+      <motion.div 
+        className = {styles.colorModeContainer}
+        variants={imageVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <div className={styles.imageWrapper}>
+          <img className = {styles.Courtois_pic} 
+          src={CourtoisImg} 
+          alt = "Profile Pic"
+          />
+          <div className={styles.imageGlow}></div>
+        </div>
+      </motion.div>
+      <motion.div 
+        className = {styles.info}
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      > 
+          <motion.div variants={itemVariants}>
+            <h1 className={styles.name}> 
+              <span className={styles.firstName}>Javier</span>
+              <br />
+              <span className={styles.lastName}>Laveaga</span>
+            </h1>
+          </motion.div>
+          <motion.h2 variants={itemVariants} className={styles.title}>
+            Full Stack Developer
+          </motion.h2>
+          <motion.span variants={itemVariants} className={styles.socialLinks}>
+            <a href = "https://www.linkedin.com/in/javier-laveaga/" target = "_blank" className={styles.socialIcon}>
               <img src = {LinkedinIcon} alt = "LinkedIn icon" />  
             </a>
-            <a href = "https://github.com/javier-la200426" target = "_blank" >
+            <a href = "https://github.com/javier-la200426" target = "_blank" className={styles.socialIcon}>
               <img src = {GithubIcon} alt = "Github icon" />  
             </a>
-            <a href = "mailto:javier.la200426@gmail.com" target = "_blank" >
+            <a href = "mailto:javier.la200426@gmail.com" target = "_blank" className={styles.socialIcon}>
               <img src = {MailIcon} alt = "Mail icon" />  
             </a>
-          </span>
-          <p className={styles.description}> 
+          </motion.span>
+          <motion.p variants={itemVariants} className={styles.description}> 
             I am a Computer Science student at Tufts University with experience in 
             both front-end and back-end development
-          </p>
-          <a href = {Resume} download> 
-            <button className="hover_btn" >Resume</button>
-          </a>
-      </div>
-    
+          </motion.p>
+          <motion.div variants={itemVariants}>
+            <a href = {Resume} download> 
+              <button className={styles.resumeBtn}>
+                Download Resume
+                <span className={styles.btnIcon}>↓</span>
+              </button>
+            </a>
+          </motion.div>
+      </motion.div>
+      
+      <motion.div 
+        className={styles.scrollIndicator}
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ 
+          delay: 1.5,
+          duration: 0.8,
+          repeat: Infinity,
+          repeatType: "reverse"
+        }}
+      >
+        <span className={styles.scrollText}>Scroll</span>
+        <span className={styles.scrollArrow}>↓</span>
+      </motion.div>
     </section>
   );
 }
 
-export default Courtois; //can use this component because of the export
+export default Courtois;

@@ -1,3 +1,5 @@
+import React from 'react';
+import { motion } from 'framer-motion';
 import styles from './ProjectStyles.module.css';
 import Proj1 from '../../assets/Puppy1.png';
 import Proj2 from '../../assets/compression.png';
@@ -10,10 +12,46 @@ import EnglishAtLargImg from '../../assets/EnglishAtLargImg.png'
 import IconStart from '../../assets/IconStart.png'
 
 function Projects() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
+  const titleVariants = {
+    hidden: { opacity: 0, y: -30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
     <section id="projects" className={styles.container}>
-      <h1 className="sectionTitle">Projects </h1>
-      <div className={styles.projectsContainer}>
+      <motion.h1 
+        className="sectionTitle"
+        variants={titleVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        Featured Projects
+      </motion.h1>
+      <motion.div 
+        className={styles.projectsContainer}
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+      >
         <ProjectCard
           src={IconStart}
           link={'https://surveyaidapp.com/'}
@@ -38,7 +76,6 @@ function Projects() {
           h3={"AI Puppy Website"}
           p={"Developed an Integrated Development Environment (IDE) for LEGO SPIKE™ Prime "}
         />
-
         <ProjectCard
           src={Bloomberg}
           link={'https://github.com/javier-la200426/newsfeed-app-bloomberg/tree/main?tab=readme-ov-file'}
@@ -50,21 +87,18 @@ function Projects() {
           h3={"Image Compressor"}
           p={"Implemented in C using discrete cosine transformation, quantization, and bit packing techniques"}
         />
-
         <ProjectCard
           src={Proj3}
           h3={"Universal Machine"}
           p={"Created a Turing-complete virtual machine in C, achieving 12x processing speed increase after profiling"}
         />
-
         <ProjectCard
           src={Proj4}
           h3={"Command Line Interface (CLI)"}
           p={"Implemented a CLI tool for searching words or character sequences within files in a directory"}
         />
-      </div>
+      </motion.div>
     </section>
-
   );
 }
 
