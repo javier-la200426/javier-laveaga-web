@@ -87,12 +87,12 @@
 
 /* Make sun icon white/bright */
 [data-theme='light'] .themeToggle {
-    filter: brightness(0) invert(1);
+    filter: brightness(0) invert(0);
 }
 
 /* Make moon icon dark */
 [data-theme='dark'] .themeToggle {
-    filter: brightness(0) invert(0);
+    filter: brightness(0) invert(1);
 }
 
 @media (max-width: 768px) {
