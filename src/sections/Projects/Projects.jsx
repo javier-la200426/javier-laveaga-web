@@ -10,6 +10,7 @@ import Hopimg from '../../assets/HopImage.png';
 import Bloomberg from '../../assets/Bloomberg.png';
 import EnglishAtLargImg from '../../assets/EnglishAtLargImg.png'
 import IconStart from '../../assets/IconStart.png'
+import WAGLogo from '../../assets/WAGLogo-Transparent.png'
 
 function Projects() {
   const containerVariants = {
@@ -52,6 +53,12 @@ function Projects() {
         whileInView="visible"
         viewport={{ once: true, amount: 0.1 }}
       >
+        <ProjectCard
+          src={WAGLogo}
+          link={'https://wearagift.com/'}
+          h3={"WearAGift"}
+          p={"Gift try-on mobile app powered by Google's top image models"}
+        />
         <ProjectCard
           src={IconStart}
           link={'https://surveyaidapp.com/'}
