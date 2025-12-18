@@ -15,32 +15,48 @@ function ProjectCard({src, link, h3, p}) {
     },
   };
 
+  const hasLink = !!link;
+
+  const cardContent = (
+    <>
+      <div className={styles.imageContainer}>
+        <img 
+          src={src} 
+          alt={`${h3} thumbnail`}
+          className={styles.image}
+        />
+        <div className={`${styles.overlay} ${!hasLink ? styles.overlayNoLink : ''}`}>
+          <span className={styles.viewProject}>
+            {hasLink ? 'View Project →' : 'Link not available'}
+          </span>
+        </div>
+      </div>
+      <div className={styles.content}>
+        <h3 className={styles.title}>{h3}</h3>
+        <p className={styles.description}>{p}</p>
+      </div>
+    </>
+  );
+
   return (
     <motion.div
       className={styles.card}
       variants={cardVariants}
     >
-      <a 
-        href={link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={styles.cardLink}
-      > 
-        <div className={styles.imageContainer}>
-          <img 
-            src={src} 
-            alt={`${h3} thumbnail`}
-            className={styles.image}
-          />
-          <div className={styles.overlay}>
-            <span className={styles.viewProject}>View Project →</span>
-          </div>
+      {hasLink ? (
+        <a 
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.cardLink}
+        >
+          {cardContent}
+        </a>
+      ) : (
+        <div className={styles.cardLink}>
+          {cardContent}
         </div>
-        <div className={styles.content}>
-          <h3 className={styles.title}>{h3}</h3>
-          <p className={styles.description}>{p}</p>
-        </div>
-      </a>
+      )}
     </motion.div>
   )
 }

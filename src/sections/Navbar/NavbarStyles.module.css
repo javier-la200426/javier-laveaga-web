@@ -4,16 +4,18 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 20px 0;
-  transition: all 0.3s ease;
+  padding: 15px 0;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
   background-color: transparent;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: background-color, box-shadow;
 }
 
 .navbar.scrolled {
   background-color: var(--nav-bg);
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-  padding: 15px 0;
 }
 
 .navContent {
@@ -98,10 +100,10 @@
 @media (max-width: 768px) {
   .navbar {
     padding: 12px 0;
-  }
-
-  .navbar.scrolled {
-    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
   }
 
   .navContent {

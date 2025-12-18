@@ -46,7 +46,7 @@ input, textarea {
 input:focus, textarea:focus {
     outline: none;
     border-color: var(--accent-color);
-    box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 textarea {

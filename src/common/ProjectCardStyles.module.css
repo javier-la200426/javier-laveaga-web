@@ -60,6 +60,10 @@
   opacity: 0.95;
 }
 
+.overlayNoLink {
+  background: linear-gradient(135deg, rgba(100, 100, 100, 0.95) 0%, rgba(70, 70, 70, 0.95) 100%);
+}
+
 .viewProject {
   color: white;
   font-size: 20px;

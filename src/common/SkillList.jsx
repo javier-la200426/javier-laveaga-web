@@ -3,11 +3,13 @@ import { motion } from 'framer-motion';
 import styles from './SkillListStyles.module.css';
 
 function SkillList({skill}) {
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+
   const itemVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
-      scale: 1,
+      y: 0,
       transition: {
         duration: 0.4,
         ease: "easeOut",
@@ -19,8 +21,8 @@ function SkillList({skill}) {
     <motion.div 
       className={styles.skillBadge}
       variants={itemVariants}
-      whileHover={{ scale: 1.05, y: -5 }}
-      whileTap={{ scale: 0.95 }}
+      whileHover={!isMobile ? { scale: 1.05, y: -5 } : undefined}
+      whileTap={!isMobile ? { scale: 0.95 } : undefined}
     >
       <span className={styles.skillText}>{skill}</span>
     </motion.div>
