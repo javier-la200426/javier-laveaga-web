@@ -26,8 +26,18 @@ function Skills() {
     },
   };
 
-  const languages = ["C++", "C", "Python", "Java", "JavaScript", "TypeScript", "HTML", "CSS", "ReactJS"];
-  const tools = ["Visual Studio Code", "GitHub", "Git", "Docker", "Redis", "Flask"];
+  const languages = [
+    "C", "C++", "Java", "Python", "JavaScript", "TypeScript", "PyScript",
+    "HTML", "CSS", "SQL", "MATLAB",
+    "React", "React Native", "Node.js", "Flask", "FastAPI"
+  ];
+  const tools = [
+    "Git", "GitHub", "GitHub Actions", "Docker", "Slurm",
+    "PostgreSQL", "MongoDB", "AWS (S3)",
+    "VS Code", "Cursor", "Claude Code",
+    "LaTeX", "Tableau", "Microsoft Office 365",
+    "Arduino", "LEGO Robotics", "Video Editing"
+  ];
   const languages_spoken = ["English", "Spanish", "French"];
 
   return (

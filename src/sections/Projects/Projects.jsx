@@ -12,6 +12,7 @@ import EnglishAtLargImg from '../../assets/EnglishAtLargImg.png'
 import IconStart from '../../assets/IconStart.png'
 import WAGLogo from '../../assets/WAGLogo-Transparent.png'
 import TuftsSystemStatus from '../../assets/tufts-systemstatus.png'
+import TuftsJobMonitor from '../../assets/tufts-jobmonitor.png'
 
 function Projects() {
   const containerVariants = {
@@ -77,6 +78,12 @@ function Projects() {
           link={'https://github.com/javier-la200426/cluster-dashboard/tree/main'}
           h3={"Tufts System Status"}
           p={"Web-based dashboard for monitoring Tufts HPC cluster resources (deployed to production)"}
+        />
+        <ProjectCard
+          src={TuftsJobMonitor}
+          link={'https://github.com/javier-la200426/JobAppTTS'}
+          h3={"Tufts Job Monitor"}
+          p={"Ruby/Sinatra app with REST API for SLURM job tracking, built for Open OnDemand (open-source HPC platform)"}
         />
         <ProjectCard
           src={EnglishAtLargImg}
