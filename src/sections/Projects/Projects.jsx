@@ -11,6 +11,7 @@ import Bloomberg from '../../assets/Bloomberg.png';
 import EnglishAtLargImg from '../../assets/EnglishAtLargImg.png'
 import IconStart from '../../assets/IconStart.png'
 import WAGLogo from '../../assets/WAGLogo-Transparent.png'
+import TuftsSystemStatus from '../../assets/tufts-systemstatus.png'
 
 function Projects() {
   const containerVariants = {
@@ -70,6 +71,12 @@ function Projects() {
           link={'https://devpost.com/software/hopoffer?ref_content=my-projects-tab&ref_feature=my_projects'}
           h3={"HopOffer"}
           p={"Swipe. Match. Get Hired. The ultimate job discovery mobile app built for students"}
+        />
+        <ProjectCard
+          src={TuftsSystemStatus}
+          link={'https://github.com/javier-la200426/cluster-dashboard/tree/main'}
+          h3={"Tufts System Status"}
+          p={"Web-based dashboard for monitoring Tufts HPC cluster resources (deployed to production)"}
         />
         <ProjectCard
           src={EnglishAtLargImg}
